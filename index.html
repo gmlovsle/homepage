@@ -128,4 +128,116 @@
                         Waves.attach('#bg-pattern', null, true);
                         init();
                         $(window).on('hashchange', routing);
-                        $
+                        $('#example .top-button').on('click', function () {
+                            var type = $(this).data('code');
+                            $('#source-code .box .code').addClass('hide');
+                            $('#source-code .box #code-' + type).removeClass('hide');
+                            $('#source-code').removeClass('hide');
+                            setTimeout(function () {
+                                $('#source-code').addClass('show');
+                            }, 50);
+                        });
+                        $('#source-code .top-button').on('click', function () {
+                            $('#source-code').removeClass('show');
+                            setTimeout(function () {
+                                $('#source-code .box .code').addClass('hide');
+                                $('#source-code').addClass('hide');
+                            }, 500);
+                        });
+                    });
+                </script>
+            </div>
+            <div class="section center">
+                <h1>教育</h1>
+                <h4>2015年毕业于<a href="http://www.swpu.edu.cn/" target="_blank">西南石油大学</a>本科</h4>
+                <p>机械工程与自动化（机电一体化）</p>
+              <h3>我的大学</h3>
+              <p style="margin:0 0;">申请老师助理工作，负责给新生讲解机械结构和摩托车发动机原理，除了</p>
+            <p style="margin:0 0;">帮助老师完成日常工作，还参加到项目中。在工作期间，参加了</p>
+          <p style="margin:0 0;">如办公软件、新闻写作和摄影、网页设计等方面的培训。</p>
+        <h3>毕业设计</h3>
+        <p>《3D打印三维切模方法及控制软件研究》</p>
+            </div>
+            <div class="section center">
+                <h1>Work Experience</h1>
+                <h3> Chengdu three-phase Albert E-commerce Co., Ltd. front-end engineers 2016.12 - 2017.05 </h3>
+        <p> 1. Participate in web end mall project, with UI and background developers to achieve online store front-end features. </p>
+        <p> 2. Responsible for the production of HTML, CSS, JS, library, frame preparation, to solve the problem of browser adapter. </p>
+        <p> 3. The post-maintenance of the project, improve the user's experience, page BUG modify, debug, compatibility issues. </p>
+        <p></p>
+        <h3> Sichuan Daoqin CNC Tool Co., Ltd. Technician 2016.07 - 2016.10 </h3>
+        <P> non-standard CNC tool two-dimensional three-dimensional design, the use of VB for CNC blade design calculation programming, </p>
+        <p> Complete HTML, CSS, JS, JQuery, Bootstrap, Sass, Vue, Egret and so on. </p>
+        <p></p>
+        <h3> Sichuan Weldon Chemical Co., Ltd. Technician 2015.06 - 2016.05 </h3>
+        <p> oil production tools packer design, complete the design calculation and the company test system software development. </p>
+            </div>
+            <div class="section center aaa">
+                <h1>About Me</h1>
+                <p id="colored-button" class="text-center">
+                <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="99+">Warm<span></span></a>
+                <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="87">Obsessive-compulsive disorder<span></span></a>
+                <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="93">Mature atmosphere<span></span></a>
+                <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="99+">A sincere man<span></span></a>
+            </p>
+                <p id="colored-button" class="text-center">
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="73">Affinity bursting<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="95">Positive and pragmatic<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="90">Take the initiative to take responsibility<span></span></a>
+                </p>
+                <p id="colored-button" class="text-center">
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="92">Serious<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="94">Hold on<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag familiar" title="3">Small strong<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="99+">A pixel of persistent<span></span></a>
+                </p>
+                <p id="colored-button" class="text-center">
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert" title="77"">Principled<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag familiar" title="10">Fresh<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag familiar" title="9">Sportsman<span></span></a>
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag familiar" title="8">Travel enthusiast<span></span></a>
+                </p>
+                <p id="colored-button" class="text-center">
+                </p>
+                <p id="colored-button" class="text-center">
+                    <a class="btn float-buttons waves-effect waves-button waves-float tag expert">Click on the label,hit me!</a>
+                </p>
+                <script>
+                    $(".aaa a").click(function () {
+                        if($(this).attr("title")=="99+"){
+                            $(this).attr("title","99+");
+                            $(this).children("span").text("99+");
+                        }
+                        else if($(this).attr("title")=="99"){
+                            $(this).attr("title","99+");
+                            $(this).children("span").text("99+");
+                        }
+                        else{
+                            if($(this).attr("title")>=10){
+                                $(this).removeClass("familiar");
+                                $(this).addClass("expert");
+                            }
+                            var a=$(this).attr("title");
+                            var b=parseInt(a)+1;
+                            $(this).attr("title",b);
+                            $(this).children("span").text(b);
+                        }
+                    })
+                </script>
+            </div>
+            <div class="section center">
+                <h1>More</h1>
+                <h2><a href="http://zhanggenming.club/" target="_blank">Homepage</a> | <a href="https://github.com/gmlovsle" target="_blank">Github</a></h2>
+                <p>Tel: <a href="#">18180820306</a></p>
+                <h2><a href="zhanggenming18180820306.pdf" target="_blank" class="highlight">Download resume</a></h2>
+                <h4>Thank you for taking the time to read my resume~</h4>
+                <h6>I wish you a happy life and work well！</h6>
+            </div>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../blog/js/jquery-1.11.1.min.js"><\/script>');</script>
+        <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+        <script type="text/javascript" src="js/index.min.js"></script>
+    </div>
+    </body>
+</html>
+
